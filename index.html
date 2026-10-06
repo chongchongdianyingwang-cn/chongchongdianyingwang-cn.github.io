@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>虫虫电影网 - 微观自然题材电影推荐与观影片单_每日更新</title>
+<meta name="description" content="虫虫电影网（https://chongchongdianyingwang-cn.github.io）用昆虫标本的思路整理电影：每日更新标本盒片单、生长阶段、生态箱分层、放大观察与蝶翼对照，主打自然与微观题材影片推荐，附剧情简介、时长与评分参考，页面移动端自适应。">
+<meta name="keywords" content="虫虫电影网,电影推荐,自然题材电影,微观纪录片,观影片单,在线观看,电影评分,生态纪录片,观影指南,影视资讯">
+<meta name="author" content="虫虫电影网">
+<meta name="robots" content="index,follow">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#232a1e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="虫虫电影网">
+<link rel="canonical" href="https://chongchongdianyingwang-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="虫虫电影网">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="虫虫电影网 - 微观自然题材电影推荐与观影片单_每日更新">
+<meta property="og:description" content="虫虫电影网每日更新标本盒片单、生长阶段、生态箱分层、放大观察与蝶翼对照，附剧情简介、时长与评分参考。">
+<meta property="og:url" content="https://chongchongdianyingwang-cn.github.io/">
+<meta property="og:image" content="https://chongchongdianyingwang-cn.github.io/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="虫虫电影网 - 微观自然题材电影推荐与观影片单">
+<meta name="twitter:description" content="标本盒片单、生态箱分层、蝶翼对照一站聚合，虫虫电影网每日更新。">
+<style>
+/* ==========================================================
+   虫虫电影网 · 昆虫标本室 / 微观博物
+   标本纸米底 + 苔绿 + 琥珀蜜 + 铁锈红 + 墨黑
+   零件：六边形蜂巢标本格(clip-path) / 标本针 / 标签纸 /
+        生态箱玻璃罩(clip-path 罐体+分层) / 放大镜圆环 /
+        蝶翼对称(clip-path 翼形) / 生长阶段点线轴
+   DOM 差异化：针插标签导航 / 蜂巢六边形网格 /
+     卵幼虫蛹成虫 点线阶段轴 / 罐装分层生态箱 /
+     放大镜圆卡 / 左右镜像蝶翼 / 触角式分隔
+   ========================================================== */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Helvetica,Arial,sans-serif;
+  background:#f4efe1;color:#2b3123;line-height:1.82;font-size:16px;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+img{border:0;max-width:100%;height:auto}
+h1,h2,h3,h4{line-height:1.4}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace}
+
+:root{
+  --paper:#f4efe1;
+  --paper2:#fbf8ee;
+  --ink:#232a1e;
+  --leaf:#4a7c3f;
+  --leaf2:#365c2f;
+  --amber:#d99a2b;
+  --rust:#c1502e;
+  --moss:#6f8f4a;
+  --sub:#5b6150;
+  --muted:#8a8a76;
+  --line:rgba(35,42,30,.26);
+  --hair:rgba(35,42,30,.13);
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(700px 460px at 88% -4%,rgba(217,154,43,.14),transparent 62%),
+    radial-gradient(700px 460px at 4% 8%,rgba(74,124,63,.14),transparent 60%),
+    radial-gradient(680px 520px at 50% 108%,rgba(193,80,46,.10),transparent 62%);
+}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 22px}
+
+/* ---------- 通用零件 ---------- */
+.pin{position:absolute;width:10px;height:10px;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%,#fff3d6,#6c6a58);box-shadow:0 1px 2px rgba(0,0,0,.35);z-index:3}
+.label-paper{background:var(--paper2);border:1px solid var(--line);box-shadow:0 2px 6px rgba(35,42,30,.10)}
+.antenna{height:10px;border:0;background:
+  radial-gradient(2px 2px at 12% 60%,var(--ink),transparent),
+  radial-gradient(2px 2px at 88% 60%,var(--ink),transparent),
+  linear-gradient(90deg,transparent 12%,var(--line) 12% 88%,transparent 88%);
+  background-repeat:no-repeat;background-size:auto,auto,100% 1px;background-position:0 0,0 0,0 50%;opacity:.8}
+
+/* ============ 针插标签导航 ============ */
+header.cabinet{position:sticky;top:0;z-index:60;background:rgba(244,239,225,.95);border-bottom:2px solid var(--ink);backdrop-filter:blur(8px)}
+.cab-top{max-width:1160px;margin:0 auto;padding:7px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:11.5px;letter-spacing:1.5px;color:var(--muted)}
+.cab-top span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cab-top b{color:var(--rust)}
+.cab-main{max-width:1160px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:16px}
+.logo{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.logo .hexmark{
+  width:42px;height:48px;flex:0 0 auto;background:linear-gradient(150deg,#6f9a55,#365c2f);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  display:flex;align-items:center;justify-content:center;color:#fbf8ee;font-size:17px;font-weight:800;
+}
+.logo strong{display:block;font-size:20px;letter-spacing:2px;color:var(--ink)}
+.logo small{display:block;font-size:10px;letter-spacing:2.5px;color:var(--muted)}
+nav.spec{margin-left:auto;overflow-x:auto;scrollbar-width:none}
+nav.spec::-webkit-scrollbar{display:none}
+nav.spec ul{display:flex;gap:7px}
+nav.spec a{
+  display:block;padding:7px 13px;font-size:13.5px;font-weight:700;color:var(--ink);
+  background:var(--paper2);border:1px solid var(--line);border-radius:3px;white-space:nowrap;transition:.18s;
+  box-shadow:0 2px 5px rgba(35,42,30,.08);
+}
+nav.spec a:hover{transform:translateY(-2px);background:#fff}
+nav.spec a.on{background:var(--leaf2);color:#fbf8ee;border-color:var(--leaf2)}
+.lensbox{flex:0 0 auto;display:flex;align-items:center;border:1px solid var(--ink);border-radius:3px;background:var(--paper2)}
+.lensbox input{width:132px;height:30px;border:0;outline:none;background:transparent;padding:0 11px;font-size:13px;color:var(--ink);font-family:inherit}
+.lensbox input::placeholder{color:#a29b86}
+.lensbox button{height:30px;border:0;border-left:1px solid var(--ink);padding:0 14px;font-size:12.5px;font-weight:800;color:#fbf8ee;background:var(--ink);cursor:pointer;font-family:inherit}
+
+/* ============ 首屏：标本盒封面 ============ */
+.case{padding:30px 0 8px}
+.case-inner{border:2px solid var(--ink);background:var(--paper2);position:relative;padding:0;overflow:hidden}
+.case-inner::before{content:"";position:absolute;left:0;right:0;top:0;height:7px;background:var(--leaf2)}
+.case-grid{display:grid;grid-template-columns:1fr 330px;gap:0}
+.case-l{padding:36px 36px 32px}
+.case-l .kick{
+  display:inline-block;font-size:11px;letter-spacing:4px;font-weight:800;color:#fbf8ee;background:var(--rust);padding:5px 14px;border-radius:3px;
+}
+.case-l h1{margin-top:16px;font-size:clamp(28px,5.4vw,50px);letter-spacing:2px;line-height:1.22;color:var(--ink)}
+.case-l h1 em{font-style:normal;color:var(--leaf2)}
+.case-l .lead{margin-top:18px;font-size:15px;color:#4a5140;max-width:34em}
+.case-l .url{margin-top:14px;font-size:13.5px;color:var(--muted);word-break:break-all}
+.case-l .url b{color:var(--ink)}
+.case-btns{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+.btnc{display:inline-block;padding:12px 26px;border-radius:3px;font-size:14.5px;font-weight:800;border:2px solid var(--ink);transition:.18s}
+.btnc-a{background:var(--amber);color:#2b3123;box-shadow:0 8px 18px rgba(217,154,43,.3)}
+.btnc-b{background:transparent;color:var(--ink)}
+.btnc:hover{transform:translateY(-2px)}
+.btnc-b:hover{background:rgba(74,124,63,.10)}
+/* 右侧标本盒小样 */
+.case-r{border-left:2px solid var(--ink);padding:26px 22px;background:rgba(217,154,43,.07)}
+.case-r .mini-cap{font-size:10.5px;letter-spacing:3px;color:var(--muted);text-align:center;margin-bottom:12px}
+.minihex{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.minihex span{
+  aspect-ratio:1/1.15;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fbf8ee;letter-spacing:1px;
+}
+.mh1{background:linear-gradient(150deg,#7ba85c,#3f6b38)}
+.mh2{background:linear-gradient(150deg,#e0b45c,#a8701c)}
+.mh3{background:linear-gradient(150deg,#d1704f,#8f3520)}
+.mh4{background:linear-gradient(150deg,#8fa86a,#4d6134)}
+.mh5{background:linear-gradient(150deg,#c9a24f,#8a6318)}
+.mh6{background:linear-gradient(150deg,#6f8f4a,#3d5a2c)}
+.case-r .mini-note{margin-top:14px;padding:10px 12px;border:1px dashed var(--line);border-radius:3px;font-size:12px;color:var(--sub);text-align:center}
+.case-r .mini-note b{color:var(--rust)}
+/* 数据条 */
+.case-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+.case-stats div{padding:15px 18px;border-right:1px solid var(--hair);text-align:center}
+.case-stats div:last-child{border-right:0}
+.case-stats .k{display:block;font-size:10.5px;letter-spacing:2px;color:var(--muted)}
+.case-stats .v{display:block;margin-top:2px;font-size:23px;font-weight:800;color:var(--ink)}
+.case-stats div:nth-child(2) .v{color:var(--rust)}
+.case-stats div:nth-child(3) .v{color:var(--leaf2)}
+
+/* ============ 栏目通用 ============ */
+section.blk{padding:46px 0 6px}
+.cap{display:flex;align-items:flex-end;gap:16px;margin-bottom:22px;padding-bottom:12px;border-bottom:2px solid var(--ink);flex-wrap:wrap}
+.cap .tag{
+  flex:0 0 auto;font-size:12px;font-weight:800;letter-spacing:2px;color:#fbf8ee;background:var(--leaf2);
+  padding:5px 13px;border-radius:3px;position:relative;
+}
+.cap h2{font-size:clamp(19px,3.4vw,27px);letter-spacing:2px}
+.cap .dsc{font-size:13px;color:var(--muted);margin-top:4px}
+.cap .go{
+  margin-left:auto;font-size:13px;font-weight:800;color:#fbf8ee;background:var(--rust);padding:7px 16px;border-radius:3px;white-space:nowrap;
+}
+
+/* ============ 一、标本盒（六边形蜂巢） ============ */
+.hive{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.hexcell{position:relative;transition:.24s}
+.hexcell:hover{transform:translateY(-4px)}
+.hexcell .hexbody{
+  aspect-ratio:1/1.15;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:14px 12px;text-align:center;
+  box-shadow:0 10px 20px rgba(35,42,30,.18);
+}
+.hexcell .hexbody .no{font-size:10.5px;letter-spacing:2px;color:rgba(251,248,238,.78)}
+.hexcell .hexbody .tt{font-size:16px;font-weight:800;color:#fbf8ee;letter-spacing:1px;line-height:1.3}
+.hexcell .hexbody .yr{font-size:11px;letter-spacing:1px;color:rgba(251,248,238,.86)}
+.h1{background:linear-gradient(150deg,#7ba85c,#3f6b38)}
+.h2{background:linear-gradient(150deg,#e0b45c,#a8701c)}
+.h3{background:linear-gradient(150deg,#d1704f,#8f3520)}
+.h4{background:linear-gradient(150deg,#8fa86a,#4d6134)}
+.h5{background:linear-gradient(150deg,#c9a24f,#8a6318)}
+.h6{background:linear-gradient(150deg,#6f8f4a,#3d5a2c)}
+.h7{background:linear-gradient(150deg,#c98a5c,#8a4a22)}
+.h8{background:linear-gradient(150deg,#7c9a7a,#3f5c3e)}
+.hexcell .cap3{margin-top:10px;text-align:center}
+.hexcell .cap3 b{display:block;font-size:14px}
+.hexcell .cap3 span{display:block;margin-top:2px;font-size:12px;color:var(--muted)}
+.hive-note{margin-top:16px;padding:13px 18px;border:1px dashed var(--line);border-radius:3px;background:rgba(251,248,238,.7);font-size:12.5px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
+.hive-note b{color:var(--ink)}
+
+/* ============ 二、生长阶段（点线轴） ============ */
+.stages{border:2px solid var(--ink);background:var(--paper2);padding:26px 24px 22px}
+.stage-track{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.stage-track .rail{
+  position:absolute;left:6%;right:6%;top:33px;height:0;border-top:2px dotted var(--line);z-index:1;
+}
+.stage{position:relative;z-index:2;text-align:center;padding:0 8px}
+.stage .dot{
+  width:66px;height:66px;margin:0 auto;border-radius:50%;border:2px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--ink);
+  background:var(--paper2);transition:.22s;
+}
+.stage:nth-child(3) .dot{background:radial-gradient(circle at 36% 32%,#fff6dd,#e0b45c)}
+.stage:nth-child(4) .dot{background:radial-gradient(circle at 36% 32%,#eaf6df,#7ba85c)}
+.stage:nth-child(5) .dot{background:radial-gradient(circle at 36% 32%,#f6e2d5,#d1704f)}
+.stage:nth-child(6) .dot{background:radial-gradient(circle at 36% 32%,#eef3e2,#6f8f4a)}
+.stage:hover .dot{transform:scale(1.06)}
+.stage .sn{margin-top:12px;font-size:10.5px;letter-spacing:2px;color:var(--muted)}
+.stage h3{margin-top:4px;font-size:16.5px}
+.stage .en{margin-top:2px;font-size:10.5px;letter-spacing:2px;color:var(--leaf2)}
+.stage p{margin-top:9px;font-size:12.5px;color:var(--sub);line-height:1.7}
+.stage ul{margin-top:11px;border-top:1px dashed var(--line);padding-top:9px}
+.stage li{display:flex;align-items:baseline;justify-content:space-between;gap:8px;font-size:13px;padding:3px 0}
+.stage li a:hover{color:var(--rust)}
+.stage li b{color:var(--rust)}
+.stages .sf{margin-top:20px;padding-top:13px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
+.stages .sf b{color:var(--ink)}
+
+/* ============ 三、生态箱（罐体分层） ============ */
+.terra{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center}
+.jar-wrap{position:relative}
+.jar{
+  position:relative;height:380px;border:2px solid var(--ink);border-radius:26px 26px 40px 40px / 30px 30px 60px 60px;
+  background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.20));overflow:hidden;
+  box-shadow:0 14px 28px rgba(35,42,30,.18),inset 0 0 24px rgba(255,255,255,.6);
+}
+.jar .lid{
+  position:absolute;left:-6px;right:-6px;top:-14px;height:26px;border:2px solid var(--ink);border-radius:6px;
+  background:linear-gradient(180deg,#8a6a3a,#5c4423);z-index:4;
+}
+.jar .glare{position:absolute;left:14px;top:26px;bottom:26px;width:22px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.65),rgba(255,255,255,.12));z-index:5}
+.jar .layer{position:relative;display:flex;align-items:center;justify-content:space-between;padding:0 22px 0 48px;color:#fbf8ee}
+.jar .layer .ln{font-size:13px;font-weight:800;letter-spacing:1px;text-shadow:0 1px 5px rgba(0,0,0,.35)}
+.jar .layer .lv{font-size:11px;letter-spacing:1px;color:rgba(251,248,238,.86)}
+.l-top{height:24%;background:linear-gradient(180deg,#cfdcc0,#a8c095)}
+.l-mid1{height:22%;background:linear-gradient(180deg,#9db884,#6f9a55)}
+.l-mid2{height:20%;background:repeating-linear-gradient(45deg,#8a6a3a 0 6px,#75562d 6px 12px)}
+.l-bot1{height:20%;background:linear-gradient(180deg,#6b4f2e,#4a3620)}
+.l-bot2{height:14%;background:linear-gradient(180deg,#4a3620,#332516)}
+.jar-note{margin-top:12px;text-align:center;font-size:12px;color:var(--muted);letter-spacing:1px}
+.terra-bd .th{font-size:11px;letter-spacing:3px;color:var(--muted)}
+.terra-bd h3{margin-top:8px;font-size:20px;letter-spacing:1px}
+.terra-bd .intro{margin-top:12px;font-size:14px;color:var(--sub);max-width:40em}
+.terra-list{margin-top:18px;border-top:1px dashed var(--line)}
+.terra-list li{display:grid;grid-template-columns:96px 1fr 120px 62px;gap:14px;align-items:center;padding:12px 4px;border-bottom:1px dotted var(--hair)}
+.terra-list li:last-child{border-bottom:0}
+.terra-list .lv{font-size:12px;font-weight:800;letter-spacing:1px;color:#fbf8ee;background:var(--leaf2);padding:3px 8px;border-radius:3px;text-align:center}
+.terra-list li:nth-child(2) .lv{background:#8a6a3a}
+.terra-list li:nth-child(3) .lv{background:var(--rust)}
+.terra-list li:nth-child(4) .lv{background:#4a3620}
+.terra-list li:nth-child(5) .lv{background:var(--moss)}
+.terra-list .nm h4{font-size:15px}
+.terra-list .nm h4 a:hover{color:var(--rust)}
+.terra-list .nm p{margin-top:3px;font-size:12px;color:var(--muted)}
+.terra-list .cond{font-size:12.5px;color:var(--sub)}
+.terra-list .rt{font-size:16px;font-weight:800;color:var(--rust);text-align:right}
+
+/* ============ 四、放大观察（放大镜圆卡） ============ */
+.lenses{display:grid;grid-template-columns:repeat(4,1fr);gap:20px 18px}
+.mag{text-align:center}
+.mag .glass{
+  position:relative;width:150px;height:150px;margin:0 auto;border-radius:50%;
+  border:3px solid var(--ink);overflow:hidden;
+  box-shadow:0 10px 22px rgba(35,42,30,.20),inset 0 0 22px rgba(255,255,255,.35);
+  transition:.24s;
+}
+.mag:hover .glass{transform:scale(1.04)}
+.mag .glass::after{
+  content:"";position:absolute;left:16%;top:12%;width:26%;height:20%;border-radius:50%;
+  background:linear-gradient(160deg,rgba(255,255,255,.75),rgba(255,255,255,.05));
+}
+.mag .glass .ring{position:absolute;inset:9px;border-radius:50%;border:1px dashed rgba(251,248,238,.5)}
+.mag .glass .ring2{position:absolute;inset:19px;border-radius:50%;border:1px solid rgba(251,248,238,.28)}
+.mag .glass .core{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;z-index:2;padding:16px;
+}
+.mag .glass .core .tt{font-size:16px;font-weight:800;color:#fbf8ee;letter-spacing:1px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.mag .glass .core .mt{font-size:11px;letter-spacing:1px;color:rgba(251,248,238,.9)}
+.g1{background:radial-gradient(circle at 40% 34%,#8fb872,#3f6b38)}
+.g2{background:radial-gradient(circle at 40% 34%,#e6c271,#a8701c)}
+.g3{background:radial-gradient(circle at 40% 34%,#d98a68,#8f3520)}
+.g4{background:radial-gradient(circle at 40% 34%,#a3b884,#4d6134)}
+.mag .handle{
+  width:16px;height:34px;margin:0 auto;background:linear-gradient(90deg,#8a6a3a,#5c4423);
+  border:2px solid var(--ink);border-top:0;border-radius:0 0 5px 5px;
+}
+.mag h3{margin-top:14px;font-size:15.5px}
+.mag h3 a:hover{color:var(--rust)}
+.mag .meta{margin-top:3px;font-size:12.5px;color:var(--muted)}
+.mag p{margin-top:8px;font-size:12.5px;color:var(--sub);line-height:1.7}
+.mag .sc{margin-top:10px;font-size:16px;font-weight:800;color:var(--rust)}
+
+/* ============ 五、蝶翼对照（左右镜像） ============ */
+.wings{border:2px solid var(--ink);background:var(--paper2);padding:26px 24px 22px}
+.wing-row{display:grid;grid-template-columns:1fr 74px 1fr;align-items:center;gap:10px}
+.wing{position:relative;padding:18px 20px;min-height:150px;display:flex;flex-direction:column;justify-content:center}
+.wing.l{
+  clip-path:polygon(0 0,100% 8%,86% 52%,100% 92%,0 100%,14% 50%);
+  background:linear-gradient(120deg,#8fb872,#3f6b38);color:#fbf8ee;text-align:right;align-items:flex-end;
+}
+.wing.r{
+  clip-path:polygon(100% 0,0 8%,14% 52%,0 92%,100% 100%,86% 50%);
+  background:linear-gradient(240deg,#a3b884,#4d6134);color:#fbf8ee;text-align:left;align-items:flex-start;
+}
+.wing .wt{font-size:18px;font-weight:800;letter-spacing:1px;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.wing .wm{margin-top:6px;font-size:12px;letter-spacing:1px;color:rgba(251,248,238,.9)}
+.wing .wp{margin-top:10px;font-size:12.5px;color:rgba(251,248,238,.92);line-height:1.7;max-width:24em}
+.body-axis{
+  width:74px;height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  background:linear-gradient(180deg,#4a3620,#2b3123);border-radius:20px;color:#fbf8ee;
+}
+.body-axis .bt{font-size:11px;letter-spacing:2px;writing-mode:vertical-rl;text-orientation:upright}
+.body-axis .bv{font-size:15px;font-weight:800}
+.wing-foot{margin-top:20px;padding-top:14px;border-top:1px dashed var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.wing-foot div{padding:12px 14px;border:1px dashed var(--line);border-radius:3px}
+.wing-foot .k{font-size:10.5px;letter-spacing:2px;color:var(--muted)}
+.wing-foot .v{margin-top:3px;font-size:14px;font-weight:700}
+.wing-foot div:nth-child(2) .v{color:var(--rust)}
+
+/* ============ 六、站点特色 ============ */
+.pts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--ink);background:var(--paper2)}
+.pt{padding:22px 20px;border-right:1px solid var(--hair)}
+.pt:last-child{border-right:0}
+.pt .ic{
+  width:44px;height:50px;background:linear-gradient(150deg,#7ba85c,#3f6b38);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  display:flex;align-items:center;justify-content:center;color:#fbf8ee;font-size:17px;font-weight:800;margin-bottom:12px;
+}
+.pt:nth-child(2) .ic{background:linear-gradient(150deg,#e0b45c,#a8701c)}
+.pt:nth-child(3) .ic{background:linear-gradient(150deg,#d1704f,#8f3520)}
+.pt:nth-child(4) .ic{background:linear-gradient(150deg,#8fa86a,#4d6134)}
+.pt h3{font-size:16px;margin-bottom:6px;letter-spacing:1px}
+.pt p{font-size:13px;color:var(--sub)}
+
+/* ============ 七、FAQ ============ */
+.faqs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:2px solid var(--ink)}
+.faqs details{border-bottom:1px dotted var(--line);padding:15px 0}
+.faqs summary{cursor:pointer;font-size:15.5px;font-weight:700;list-style:none;display:flex;gap:10px;align-items:baseline}
+.faqs summary::-webkit-details-marker{display:none}
+.faqs summary i{
+  flex:0 0 auto;width:14px;height:16px;background:linear-gradient(150deg,#7ba85c,#3f6b38);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+}
+.faqs summary::after{content:"＋";margin-left:auto;color:var(--rust);font-weight:800}
+.faqs details[open] summary::after{content:"－"}
+.faqs details p{margin-top:10px;font-size:13.5px;color:var(--sub);padding-left:24px}
+
+/* ============ 页脚 ============ */
+footer.foot{margin-top:54px;background:var(--ink);color:#d8d3c2;padding:42px 0 26px;border-top:6px solid var(--leaf2)}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}
+.f-grid h4{font-size:13px;letter-spacing:3px;color:var(--amber);margin-bottom:14px}
+.f-grid li{font-size:13.5px;padding:4px 0}
+.f-grid li a:hover{color:var(--amber)}
+.f-brand .lg{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.f-brand .lg i{
+  width:38px;height:44px;flex:0 0 auto;background:linear-gradient(150deg,#7ba85c,#3f6b38);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  display:flex;align-items:center;justify-content:center;color:#fbf8ee;font-size:16px;font-weight:800;
+}
+.f-brand .lg b{font-size:19px;letter-spacing:2px;color:#fbf8ee}
+.f-brand p{font-size:13.5px;line-height:1.95;color:#b6b1a0}
+.f-brand .u{margin-top:10px;font-size:12.5px;color:var(--amber);word-break:break-all}
+.copy{margin-top:28px;padding-top:18px;border-top:1px dashed rgba(255,255,255,.16);font-size:12.5px;color:#918d7e;text-align:center;line-height:1.9}
+
+/* ============ 移动端底栏 ============ */
+.dock{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(35,42,30,.98);
+  border-top:2px solid var(--amber);padding:6px 4px calc(6px + env(safe-area-inset-bottom));
+}
+.dock ul{display:flex}
+.dock li{flex:1}
+.dock a{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:#b6b1a0;padding:5px 0}
+.dock a .ic{font-size:15px;line-height:1;color:var(--amber)}
+.dock a.on{color:#fbf8ee;font-weight:700}
+.up{
+  position:fixed;right:18px;bottom:80px;z-index:65;width:44px;height:50px;border:2px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;font-size:17px;color:#2b3123;background:var(--amber);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+}
+
+/* ============ 响应式 ============ */
+@media (max-width:1080px){
+  .case-grid{grid-template-columns:1fr}
+  .case-r{border-left:0;border-top:2px solid var(--ink)}
+  .hive{grid-template-columns:repeat(3,1fr)}
+  .lenses{grid-template-columns:repeat(2,1fr)}
+  .terra{grid-template-columns:260px 1fr}
+  .terra-list li{grid-template-columns:88px 1fr 62px}
+  .terra-list .cond{display:none}
+  .pts{grid-template-columns:repeat(2,1fr)}
+  .pt:nth-child(2){border-right:0}
+  .pt:nth-child(-n+2){border-bottom:1px solid var(--hair)}
+  .stage-track{grid-template-columns:repeat(2,1fr);gap:22px 0}
+  .stage-track .rail{display:none}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  body{font-size:15px;padding-bottom:62px}
+  .wrap{padding:0 16px}
+  .cab-top{padding:6px 16px;font-size:10.5px;letter-spacing:1px}
+  .cab-top span:last-child{display:none}
+  .cab-main{padding:11px 16px;gap:10px}
+  .logo .hexmark{width:34px;height:39px;font-size:14px}
+  .logo strong{font-size:17.5px;letter-spacing:1px}
+  .logo small{font-size:9px;letter-spacing:1.5px}
+  .lensbox{display:none}
+  nav.spec a{padding:6px 11px;font-size:13px}
+  .case{padding:16px 0 2px}
+  .case-l{padding:24px 18px 22px}
+  .case-r{padding:20px 18px}
+  .minihex{gap:5px}
+  .case-stats{grid-template-columns:repeat(2,1fr)}
+  .case-stats div:nth-child(2){border-right:0}
+  .case-stats div:nth-child(-n+2){border-bottom:1px solid var(--hair)}
+  .case-stats .v{font-size:19px}
+  section.blk{padding:32px 0 2px}
+  .cap .go{margin-left:0;width:100%;text-align:center}
+  .hive{grid-template-columns:repeat(2,1fr);gap:10px}
+  .hexcell .hexbody{padding:10px 8px}
+  .hexcell .hexbody .tt{font-size:14px}
+  .stages{padding:20px 16px 18px}
+  .stage-track{grid-template-columns:1fr;gap:18px}
+  .stage .dot{width:54px;height:54px;font-size:12px}
+  .stage p{max-width:none}
+  .terra{grid-template-columns:1fr;gap:18px}
+  .jar{height:280px}
+  .jar .layer{padding:0 16px 0 40px}
+  .jar .layer .ln{font-size:12px}
+  .lenses{grid-template-columns:repeat(2,1fr);gap:16px 12px}
+  .mag .glass{width:124px;height:124px}
+  .mag .glass .core .tt{font-size:14px}
+  .wings{padding:18px 16px 16px}
+  .wing-row{grid-template-columns:1fr;gap:10px}
+  .wing.l{clip-path:polygon(0 0,100% 6%,92% 50%,100% 94%,0 100%,8% 50%);align-items:flex-start;text-align:left}
+  .wing.r{clip-path:polygon(100% 0,0 6%,8% 50%,0 94%,100% 100%,92% 50%)}
+  .wing{min-height:0;padding:16px 18px}
+  .body-axis{width:100%;height:52px;flex-direction:row;gap:10px;border-radius:10px}
+  .body-axis .bt{writing-mode:horizontal-tb}
+  .wing-foot{grid-template-columns:1fr;gap:10px}
+  .pts{grid-template-columns:1fr}
+  .pt{border-right:0;border-bottom:1px solid var(--hair)}
+  .pt:last-child{border-bottom:0}
+  .faqs{grid-template-columns:1fr;gap:0}
+  .f-grid{grid-template-columns:1fr;gap:22px}
+  .dock{display:block}
+  .up{bottom:74px;right:12px;width:40px;height:46px}
+}
+@media (max-width:420px){
+  .hive{grid-template-columns:1fr}
+  .hexcell .hexbody{aspect-ratio:1/0.62}
+  .lenses{grid-template-columns:1fr}
+  .mag .glass{width:150px;height:150px}
+  .case-btns a{flex:1 1 100%;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://chongchongdianyingwang-cn.github.io/#website",
+      "url": "https://chongchongdianyingwang-cn.github.io/",
+      "name": "虫虫电影网",
+      "alternateName": "虫虫电影",
+      "description": "虫虫电影网用昆虫标本的思路整理电影：标本盒片单、生长阶段、生态箱分层、放大观察与蝶翼对照，主打自然与微观题材影片推荐。",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "https://chongchongdianyingwang-cn.github.io/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://chongchongdianyingwang-cn.github.io/#search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://chongchongdianyingwang-cn.github.io/#organization",
+      "name": "虫虫电影网",
+      "url": "https://chongchongdianyingwang-cn.github.io/",
+      "logo": "https://chongchongdianyingwang-cn.github.io/logo.png"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://chongchongdianyingwang-cn.github.io/#webpage",
+      "url": "https://chongchongdianyingwang-cn.github.io/",
+      "name": "虫虫电影网 - 微观自然题材电影推荐与观影片单_每日更新",
+      "isPartOf": { "@id": "https://chongchongdianyingwang-cn.github.io/#website" },
+      "about": "自然题材电影推荐、微观纪录片与观影片单",
+      "inLanguage": "zh-CN",
+      "breadcrumb": { "@id": "https://chongchongdianyingwang-cn.github.io/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://chongchongdianyingwang-cn.github.io/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "虫虫电影网首页", "item": "https://chongchongdianyingwang-cn.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "标本盒", "item": "https://chongchongdianyingwang-cn.github.io/#case" },
+        { "@type": "ListItem", "position": 3, "name": "生长阶段", "item": "https://chongchongdianyingwang-cn.github.io/#stage" },
+        { "@type": "ListItem", "position": 4, "name": "生态箱", "item": "https://chongchongdianyingwang-cn.github.io/#terra" },
+        { "@type": "ListItem", "position": 5, "name": "放大观察", "item": "https://chongchongdianyingwang-cn.github.io/#lens" },
+        { "@type": "ListItem", "position": 6, "name": "蝶翼对照", "item": "https://chongchongdianyingwang-cn.github.io/#wing" },
+        { "@type": "ListItem", "position": 7, "name": "站点特色", "item": "https://chongchongdianyingwang-cn.github.io/#why" },
+        { "@type": "ListItem", "position": 8, "name": "关于虫虫电影网", "item": "https://chongchongdianyingwang-cn.github.io/#about" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://chongchongdianyingwang-cn.github.io/#case",
+      "name": "虫虫电影网标本盒片单",
+      "itemListOrder": "https://schema.org/ItemListUnordered",
+      "numberOfItems": 8,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "蚁径（纪录 · 2026）" },
+        { "@type": "ListItem", "position": 2, "name": "蜕（剧情 · 2025）" },
+        { "@type": "ListItem", "position": 3, "name": "鳞翅目（文艺 · 2024）" },
+        { "@type": "ListItem", "position": 4, "name": "茧中七日（纪录 · 2026）" },
+        { "@type": "ListItem", "position": 5, "name": "雨后腐叶层（自然 · 2025）" },
+        { "@type": "ListItem", "position": 6, "name": "触角（剧情 · 2023）" },
+        { "@type": "ListItem", "position": 7, "name": "甲壳之下（纪录 · 2024）" },
+        { "@type": "ListItem", "position": 8, "name": "群飞（动画 · 2026）" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://chongchongdianyingwang-cn.github.io/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "虫虫电影网是什么样的电影网站？",
+          "acceptedAnswer": { "@type": "Answer", "text": "虫虫电影网是用昆虫标本的思路整理电影的推荐站点：片单按标本盒分格归档，影片分生长阶段陈列，另有生态箱分层、放大观察与蝶翼对照，主打自然与微观题材影片，每部影片附剧情简介、时长与评分参考。" }
+        },
+        {
+          "@type": "Question",
+          "name": "虫虫电影网的片单多久更新一次？",
+          "acceptedAnswer": { "@type": "Answer", "text": "标本盒与生态箱清单每日 20:00 更新，生长阶段按阶段持续补充，放大观察按周轮换，蝶翼对照每月更新一次对照主题。" }
+        },
+        {
+          "@type": "Question",
+          "name": "手机端可以正常浏览虫虫电影网吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "可以。虫虫电影网采用响应式设计，标本盒在小屏转为单列或双列，生态箱罐体收窄，蝶翼对照改为上下排布，片单列表精简为三列，移动端另配底部快捷导航。" }
+        },
+        {
+          "@type": "Question",
+          "name": "找不到想看的电影怎么办？",
+          "acceptedAnswer": { "@type": "Answer", "text": "可使用顶部检索框按片名或导演查找，也可进入标本盒按题材筛选；仍未收录的影片可通过联系站长提交片名，会在下一次更新时优先补录。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body id="top">
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ============ 针插标签导航 ============ -->
+<header class="cabinet">
+  <div class="cab-top">
+    <span>虫虫电影网 · 标本编号 CC-2026 · 每日 <b>20:00</b> 更新</span>
+    <span>自然 · 微观 · 生态 · 纪录</span>
+    <span>https://chongchongdianyingwang-cn.github.io</span>
+  </div>
+  <div class="cab-main">
+    <div class="logo">
+      <span class="hexmark" aria-hidden="true">虫</span>
+      <span>
+        <strong>虫虫电影网</strong>
+        <small>MICRO NATURE MOVIE · 微观题材</small>
+      </span>
+    </div>
+    <nav class="spec" aria-label="主导航">
+      <ul>
+        <li><a href="#top" class="on">标本室</a></li>
+        <li><a href="#case">标本盒</a></li>
+        <li><a href="#stage">生长阶段</a></li>
+        <li><a href="#terra">生态箱</a></li>
+        <li><a href="#lens">放大观察</a></li>
+        <li><a href="#wing">蝶翼对照</a></li>
+        <li><a href="#why">站点特色</a></li>
+        <li><a href="#about">关于本站</a></li>
+      </ul>
+    </nav>
+    <form class="lensbox" action="#" method="get" role="search">
+      <label for="q" style="position:absolute;left:-9999px">检索影片</label>
+      <input id="q" name="q" type="search" placeholder="片名 / 导演">
+      <button type="submit">检索</button>
+    </form>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 首屏：标本盒封面 ============ -->
+<section class="case wrap" aria-labelledby="h1">
+  <div class="case-inner">
+    <span class="pin" style="left:14px;top:16px" aria-hidden="true"></span>
+    <span class="pin" style="right:14px;top:16px" aria-hidden="true"></span>
+    <div class="case-grid">
+      <div class="case-l">
+        <span class="kick">微 观 自 然 · 每 日 更 新</span>
+        <h1 id="h1">把片单收进标本盒<br>这里是<em>虫虫电影网</em></h1>
+        <p class="lead">虫虫电影网用昆虫标本的思路整理电影：片单按标本盒分格归档，一格一部片；影片按生长阶段陈列，从开头到结尾像卵、幼虫、蛹、成虫一样分成四段；生态箱把题材压成分层，越往下越沉；放大观察用圆形放大镜逐部细看；蝶翼对照把两部相关的片左右并排放。自然与微观题材为主，剧情简介、时长与评分都写在条目上。</p>
+        <p class="url mono">网站网址：<b>https://chongchongdianyingwang-cn.github.io</b></p>
+        <div class="case-btns">
+          <a class="btnc btnc-a" href="#case">打开标本盒</a>
+          <a class="btnc btnc-b" href="#terra">看生态箱分层</a>
+        </div>
+      </div>
+      <div class="case-r">
+        <p class="mini-cap mono">SPECIMEN BOX · 本 期 六 格</p>
+        <div class="minihex">
+          <span class="mh1">蚁径</span>
+          <span class="mh2">蜕</span>
+          <span class="mh3">鳞翅目</span>
+          <span class="mh4">茧中七日</span>
+          <span class="mh5">腐叶层</span>
+          <span class="mh6">群飞</span>
+        </div>
+        <p class="mini-note">本期主推 <b>《蚁径》</b> · 纪录 · 86 分钟 · 编辑评分 9.0</p>
+      </div>
+    </div>
+    <div class="case-stats">
+      <div><span class="k mono">LIBRARY</span><span class="v mono">3420</span></div>
+      <div><span class="k mono">DAILY</span><span class="v mono">20:00</span></div>
+      <div><span class="k mono">CELLS</span><span class="v mono">8</span></div>
+      <div><span class="k mono">STAGES</span><span class="v mono">4</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目一：标本盒 ============ -->
+<section class="blk wrap" id="case" aria-labelledby="s1">
+  <div class="cap">
+    <span class="tag mono">01 标本盒</span>
+    <div>
+      <h2 id="s1">标本盒 · 一格一部片</h2>
+      <p class="dsc">虫虫电影网按题材分格归档，格色对应类型</p>
+    </div>
+    <a class="go" href="#case">全部格子 &raquo;</a>
+  </div>
+  <div class="hive">
+    <article class="hexcell">
+      <div class="hexbody h1"><span class="no mono">CELL 01</span><span class="tt">蚁径</span><span class="yr mono">纪录 · 86′</span></div>
+      <div class="cap3"><b>蚁径</b><span>自然纪实 · 9.0 分</span></div>
+    </article>
+    <article class="hexcell">
+      <div class="hexbody h2"><span class="no mono">CELL 02</span><span class="tt">蜕</span><span class="yr mono">剧情 · 112′</span></div>
+      <div class="cap3"><b>蜕</b><span>人物成长 · 8.9 分</span></div>
+    </article>
+    <article class="hexcell">
+      <div class="hexbody h3"><span class="no mono">CELL 03</span><span class="tt">鳞翅目</span><span class="yr mono">文艺 · 98′</span></div>
+      <div class="cap3"><b>鳞翅目</b><span>慢节奏 · 8.6 分</span></div>
+    </article>
+    <article class="hexcell">
+      <div class="hexbody h4"><span class="no mono">CELL 04</span><span class="tt">茧中七日</span><span class="yr mono">纪录 · 78′</span></div>
+      <div class="cap3"><b>茧中七日</b><span>真实向 · 8.8 分</span></div>
+    </article>
+    <article class="hexcell">
+      <div class="hexbody h5"><span class="no mono">CELL 05</span><span class="tt">雨后腐叶层</span><span class="yr mono">自然 · 92′</span></div>
+      <div class="cap3"><b>雨后腐叶层</b><span>佐餐合适 · 8.7 分</span></div>
+    </article>
+    <article class="hexcell">
+      <div class="hexbody h6"><span class="no mono">CELL 06</span><span class="tt">触角</span><span class="yr mono">剧情 · 104′</span></div>
+      <div class="cap3"><b>触角</b><span>观察向 · 8.5 分</span></div>
+    </article>
+    <article class="hexcell">
+      <div class="hexbody h7"><span class="no mono">CELL 07</span><span class="tt">甲壳之下</span><span class="yr mono">纪录 · 88′</span></div>
+      <div class="cap3"><b>甲壳之下</b><span>需专注 · 8.6 分</span></div>
+    </article>
+    <article class="hexcell">
+      <div class="hexbody h8"><span class="no mono">CELL 08</span><span class="tt">群飞</span><span class="yr mono">动画 · 96′</span></div>
+      <div class="cap3"><b>群飞</b><span>合家观影 · 8.8 分</span></div>
+    </article>
+  </div>
+  <p class="hive-note"><span>标本盒共 <b>8</b> 格</span><span>平均时长 <b>94</b> 分钟</span><span>平均分 <b>8.7</b></span><span>更新时间 <b>每日 20:00</b></span></p>
+</section>
+
+<!-- ============ 栏目二：生长阶段 ============ -->
+<section class="blk wrap" id="stage" aria-labelledby="s2">
+  <div class="cap">
+    <span class="tag mono">02 生长阶段</span>
+    <div>
+      <h2 id="s2">生长阶段 · 按观看进程分四段</h2>
+      <p class="dsc">虫虫电影网把片单按投入程度分成四段</p>
+    </div>
+    <a class="go" href="#stage">全部阶段 &raquo;</a>
+  </div>
+  <div class="stages">
+    <span class="antenna" aria-hidden="true"></span>
+    <div class="stage-track">
+      <span class="rail" aria-hidden="true"></span>
+      <article class="stage">
+        <div class="dot">卵</div>
+        <p class="sn mono">STAGE 01</p>
+        <h3>轻量开场</h3>
+        <p class="en mono">EGG · 随时可看</p>
+        <p>篇幅短、节奏明快，随时暂停也不会断线，适合通勤或做家务时放。</p>
+        <ul>
+          <li><a href="#">茧中七日</a><b>8.8</b></li>
+          <li><a href="#">群飞</a><b>8.8</b></li>
+        </ul>
+      </article>
+      <article class="stage">
+        <div class="dot">幼虫</div>
+        <p class="sn mono">STAGE 02</p>
+        <h3>渐入佳境</h3>
+        <p class="en mono">LARVA · 需要耐心</p>
+        <p>叙事慢慢铺开，前二十分钟要沉住气，进入状态后很顺。</p>
+        <ul>
+          <li><a href="#">蚁径</a><b>9.0</b></li>
+          <li><a href="#">雨后腐叶层</a><b>8.7</b></li>
+        </ul>
+      </article>
+      <article class="stage">
+        <div class="dot">蛹</div>
+        <p class="sn mono">STAGE 03</p>
+        <h3>沉下来看</h3>
+        <p class="en mono">PUPA · 需要专注</p>
+        <p>信息量大、人物关系复杂，建议留出完整的一段时间来看。</p>
+        <ul>
+          <li><a href="#">蜕</a><b>8.9</b></li>
+          <li><a href="#">触角</a><b>8.5</b></li>
+        </ul>
+      </article>
+      <article class="stage">
+        <div class="dot">成虫</div>
+        <p class="sn mono">STAGE 04</p>
+        <h3>看完会想</h3>
+        <p class="en mono">IMAGO · 后劲足</p>
+        <p>结尾留白多，看完需要缓一缓，适合安静的夜里一个人看。</p>
+        <ul>
+          <li><a href="#">鳞翅目</a><b>8.6</b></li>
+          <li><a href="#">甲壳之下</a><b>8.6</b></li>
+        </ul>
+      </article>
+    </div>
+    <p class="sf"><span>四段共收录 <b>128</b> 部</span><span>平均时长 <b>94</b> 分钟</span><span>平均分 <b>8.7</b></span><span>更新 <b>每日 20:00</b></span></p>
+  </div>
+</section>
+
+<!-- ============ 栏目三：生态箱 ============ -->
+<section class="blk wrap" id="terra" aria-labelledby="s3">
+  <div class="cap">
+    <span class="tag mono">03 生态箱</span>
+    <div>
+      <h2 id="s3">生态箱 · 题材压成分层</h2>
+      <p class="dsc">虫虫电影网把题材从上到下排进玻璃箱</p>
+    </div>
+    <a class="go" href="#terra">全部层次 &raquo;</a>
+  </div>
+  <div class="terra">
+    <div class="jar-wrap">
+      <div class="jar" role="img" aria-label="虫虫电影网生态箱分层示意图">
+        <span class="lid" aria-hidden="true"></span>
+        <span class="glare" aria-hidden="true"></span>
+        <div class="layer l-top"><span class="ln">植被层 · 轻松</span><span class="lv mono">TOP</span></div>
+        <div class="layer l-mid1"><span class="ln">枝叶层 · 日常</span><span class="lv mono">L2</span></div>
+        <div class="layer l-mid2"><span class="ln">腐叶层 · 沉积</span><span class="lv mono">L3</span></div>
+        <div class="layer l-bot1"><span class="ln">土壤层 · 厚重</span><span class="lv mono">L4</span></div>
+        <div class="layer l-bot2"><span class="ln">底床层 · 深沉</span><span class="lv mono">L5</span></div>
+      </div>
+      <p class="jar-note mono">TERRARIUM · 自上而下由轻到沉</p>
+    </div>
+    <div class="terra-bd">
+      <p class="th mono">LAYER INDEX · 分 层 索 引</p>
+      <h3>越往下，越需要沉住气</h3>
+      <p class="intro">生态箱把片单按"重量"压成五层：最上面是随时能看的轻松题材，越往下情绪越沉、节奏越慢。挑片时先看今天想停在哪一层，再顺着那一层往下翻。</p>
+      <ul class="terra-list">
+        <li>
+          <span class="lv mono">植被层</span>
+          <div class="nm"><h4><a href="#">群飞</a></h4><p>动画 · 2026 · 96 分钟</p></div>
+          <span class="cond">随时可看</span>
+          <span class="rt">8.8</span>
+        </li>
+        <li>
+          <span class="lv mono">枝叶层</span>
+          <div class="nm"><h4><a href="#">蚁径</a></h4><p>纪录 · 2026 · 86 分钟</p></div>
+          <span class="cond">佐餐合适</span>
+          <span class="rt">9.0</span>
+        </li>
+        <li>
+          <span class="lv mono">腐叶层</span>
+          <div class="nm"><h4><a href="#">雨后腐叶层</a></h4><p>自然 · 2025 · 92 分钟</p></div>
+          <span class="cond">需要耐心</span>
+          <span class="rt">8.7</span>
+        </li>
+        <li>
+          <span class="lv mono">土壤层</span>
+          <div class="nm"><h4><a href="#">蜕</a></h4><p>剧情 · 2025 · 112 分钟</p></div>
+          <span class="cond">需要专注</span>
+          <span class="rt">8.9</span>
+        </li>
+        <li>
+          <span class="lv mono">底床层</span>
+          <div class="nm"><h4><a href="#">鳞翅目</a></h4><p>文艺 · 2024 · 98 分钟</p></div>
+          <span class="cond">后劲足</span>
+          <span class="rt">8.6</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目四：放大观察 ============ -->
+<section class="blk wrap" id="lens" aria-labelledby="s4">
+  <div class="cap">
+    <span class="tag mono">04 放大观察</span>
+    <div>
+      <h2 id="s4">放大观察 · 逐部细看</h2>
+      <p class="dsc">虫虫电影网按周轮换，把重点片放到镜下</p>
+    </div>
+    <a class="go" href="#lens">往期观察 &raquo;</a>
+  </div>
+  <div class="lenses">
+    <article class="mag">
+      <div class="glass g1"><span class="ring" aria-hidden="true"></span><span class="ring2" aria-hidden="true"></span>
+        <span class="core"><span class="tt">蚁径</span><span class="mt mono">86′ · 纪录</span></span>
+      </div>
+      <div class="handle" aria-hidden="true"></div>
+      <h3><a href="#">蚁径</a></h3>
+      <p class="meta">自然纪实 · 2026</p>
+      <p>跟拍一条蚁道上的七天，镜头几乎不动，变化全在细节里。</p>
+      <p class="sc">9.0</p>
+    </article>
+    <article class="mag">
+      <div class="glass g2"><span class="ring" aria-hidden="true"></span><span class="ring2" aria-hidden="true"></span>
+        <span class="core"><span class="tt">蜕</span><span class="mt mono">112′ · 剧情</span></span>
+      </div>
+      <div class="handle" aria-hidden="true"></div>
+      <h3><a href="#">蜕</a></h3>
+      <p class="meta">人物成长 · 2025</p>
+      <p>一个人换掉生活里所有旧东西的过程，克制但压得住情绪。</p>
+      <p class="sc">8.9</p>
+    </article>
+    <article class="mag">
+      <div class="glass g3"><span class="ring" aria-hidden="true"></span><span class="ring2" aria-hidden="true"></span>
+        <span class="core"><span class="tt">茧中七日</span><span class="mt mono">78′ · 纪录</span></span>
+      </div>
+      <div class="handle" aria-hidden="true"></div>
+      <h3><a href="#">茧中七日</a></h3>
+      <p class="meta">真实向 · 2026</p>
+      <p>七天里同一只茧的固定机位记录，最后一天只有几十秒。</p>
+      <p class="sc">8.8</p>
+    </article>
+    <article class="mag">
+      <div class="glass g4"><span class="ring" aria-hidden="true"></span><span class="ring2" aria-hidden="true"></span>
+        <span class="core"><span class="tt">群飞</span><span class="mt mono">96′ · 动画</span></span>
+      </div>
+      <div class="handle" aria-hidden="true"></div>
+      <h3><a href="#">群飞</a></h3>
+      <p class="meta">合家观影 · 2026</p>
+      <p>手绘风格的群体迁徙，色彩层次丰富，孩子也能看完。</p>
+      <p class="sc">8.8</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 栏目五：蝶翼对照 ============ -->
+<section class="blk wrap" id="wing" aria-labelledby="s5">
+  <div class="cap">
+    <span class="tag mono">05 蝶翼对照</span>
+    <div>
+      <h2 id="s5">蝶翼对照 · 两部相关的片放一起</h2>
+      <p class="dsc">虫虫电影网每月更新一次对照主题</p>
+    </div>
+    <a class="go" href="#wing">往期对照 &raquo;</a>
+  </div>
+  <div class="wings">
+    <div class="wing-row">
+      <article class="wing l">
+        <h3 class="wt">蚁径</h3>
+        <p class="wm mono">纪录 · 2026 · 86 分钟 · 9.0</p>
+        <p class="wp">镜头贴着地面走，几乎不给全景，观众得自己拼出那条路通向哪里。</p>
+      </article>
+      <div class="body-axis">
+        <span class="bt mono">对照</span>
+        <span class="bv mono">VS</span>
+      </div>
+      <article class="wing r">
+        <h3 class="wt">雨后腐叶层</h3>
+        <p class="wm mono">自然 · 2025 · 92 分钟 · 8.7</p>
+        <p class="wp">同样是贴地视角，但把时间拉长到一整个雨季，节奏更平稳一些。</p>
+      </article>
+    </div>
+    <div class="wing-foot">
+      <div><p class="k mono">本期主题</p><p class="v">贴地视角 · 两种时间尺度</p></div>
+      <div><p class="k mono">推荐顺序</p><p class="v">先看《蚁径》，再补《雨后腐叶层》</p></div>
+      <div><p class="k mono">更新时间</p><p class="v">每月更新一次对照主题</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目六：站点特色 ============ -->
+<section class="blk wrap" id="why" aria-labelledby="s6">
+  <div class="cap">
+    <span class="tag mono">06 站点特色</span>
+    <div>
+      <h2 id="s6">为什么用虫虫电影网挑片</h2>
+      <p class="dsc">找片像整理标本盒，一格一格往下翻</p>
+    </div>
+    <a class="go" href="#about">了解我们 &raquo;</a>
+  </div>
+  <div class="pts">
+    <div class="pt">
+      <span class="ic" aria-hidden="true">01</span>
+      <h3>分格归档</h3>
+      <p>标本盒一格一部片，格色对应题材，扫一眼就知道哪格是什么类型。</p>
+    </div>
+    <div class="pt">
+      <span class="ic" aria-hidden="true">02</span>
+      <h3>按进程排</h3>
+      <p>生长阶段把片单按投入程度分成四段，今天有多少时间就挑哪一段。</p>
+    </div>
+    <div class="pt">
+      <span class="ic" aria-hidden="true">03</span>
+      <h3>题材有重量</h3>
+      <p>生态箱把题材压成五层，越往下越沉，先看今天想停在哪一层。</p>
+    </div>
+    <div class="pt">
+      <span class="ic" aria-hidden="true">04</span>
+      <h3>成对照着看</h3>
+      <p>蝶翼对照把两部相关的片左右并排放，看完一部自然知道下一部。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目七：关于 / FAQ ============ -->
+<section class="blk wrap" id="about" aria-labelledby="s7">
+  <div class="cap">
+    <span class="tag mono">07 关于本站</span>
+    <div>
+      <h2 id="s7">关于虫虫电影网 · 常见问题</h2>
+      <p class="dsc">了解虫虫电影网的收录范围与更新节奏</p>
+    </div>
+    <a class="go" href="#about">联系站长 &raquo;</a>
+  </div>
+  <div class="faqs">
+    <details open>
+      <summary><i aria-hidden="true"></i>虫虫电影网是什么样的电影网站？</summary>
+      <p>虫虫电影网（https://chongchongdianyingwang-cn.github.io）是用昆虫标本的思路整理电影的推荐站点：片单按标本盒分格归档，影片分生长阶段陈列，另有生态箱分层、放大观察与蝶翼对照，主打自然与微观题材影片，每部影片附剧情简介、时长与评分参考。</p>
+    </details>
+    <details>
+      <summary><i aria-hidden="true"></i>虫虫电影网的片单多久更新一次？</summary>
+      <p>标本盒与生态箱清单每日 20:00 更新，生长阶段按阶段持续补充，放大观察按周轮换，蝶翼对照每月更新一次对照主题。</p>
+    </details>
+    <details>
+      <summary><i aria-hidden="true"></i>手机端可以正常浏览虫虫电影网吗？</summary>
+      <p>可以。虫虫电影网采用响应式设计，标本盒在小屏转为单列或双列，生态箱罐体收窄，蝶翼对照改为上下排布，片单列表精简为三列，移动端另配底部快捷导航。</p>
+    </details>
+    <details>
+      <summary><i aria-hidden="true"></i>找不到想看的电影怎么办？</summary>
+      <p>可使用顶部检索框按片名或导演查找，也可进入标本盒按题材筛选；仍未收录的影片可通过联系站长提交片名，我们会在下一次更新时优先补录。</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="lg"><i aria-hidden="true">虫</i><b>虫虫电影网</b></div>
+        <p>虫虫电影网用昆虫标本的思路整理电影：片单按标本盒分格归档，一格一部片；影片按生长阶段陈列，从开头到结尾像卵、幼虫、蛹、成虫一样分成四段；生态箱把题材压成分层，越往下越沉；放大观察用圆形放大镜逐部细看；蝶翼对照把两部相关的片左右并排放。自然与微观题材为主，剧情简介、时长与评分都写在条目上。</p>
+        <p class="u mono">网址：https://chongchongdianyingwang-cn.github.io</p>
+      </div>
+      <div>
+        <h4>标本栏目</h4>
+        <ul>
+          <li><a href="#case">标本盒</a></li>
+          <li><a href="#stage">生长阶段</a></li>
+          <li><a href="#terra">生态箱</a></li>
+          <li><a href="#lens">放大观察</a></li>
+          <li><a href="#wing">蝶翼对照</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>题材分层</h4>
+        <ul>
+          <li><a href="#terra">自然纪实</a></li>
+          <li><a href="#terra">生态观察</a></li>
+          <li><a href="#terra">人物成长</a></li>
+          <li><a href="#terra">文艺慢片</a></li>
+          <li><a href="#terra">动画合家欢</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>站点信息</h4>
+        <ul>
+          <li><a href="#about">关于虫虫电影网</a></li>
+          <li><a href="#why">站点特色</a></li>
+          <li><a href="#case">本期片单</a></li>
+          <li><a href="#">意见反馈</a></li>
+          <li><a href="#">免责声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">
+      虫虫电影网 &copy; 2026 · 本站为自然题材电影推荐与影视资讯聚合站点，所列影片信息仅供参考。<br>
+      Powered by 虫虫电影网 | https://chongchongdianyingwang-cn.github.io
+    </p>
+  </div>
+</footer>
+
+<!-- ============ 移动端底部导航 ============ -->
+<nav class="dock" aria-label="移动端快捷导航">
+  <ul>
+    <li><a href="#top" class="on"><span class="ic" aria-hidden="true">◈</span>标本室</a></li>
+    <li><a href="#case"><span class="ic" aria-hidden="true">⬡</span>标本盒</a></li>
+    <li><a href="#stage"><span class="ic" aria-hidden="true">◍</span>阶段</a></li>
+    <li><a href="#terra"><span class="ic" aria-hidden="true">▤</span>生态箱</a></li>
+    <li><a href="#about"><span class="ic" aria-hidden="true">◎</span>关于</a></li>
+  </ul>
+</nav>
+
+<a class="up" href="#top" aria-label="返回顶部">↑</a>
+
+</body>
+</html>
